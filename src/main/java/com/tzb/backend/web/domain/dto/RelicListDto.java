@@ -6,8 +6,8 @@ import lombok.Data;
  * @author 29002
  */
 @Data
-public class SpecialExhibitCardDto {
-    private int id;
+public class RelicListDto {
+    private Long id;
     private String image;
     private String name;
     private String description;

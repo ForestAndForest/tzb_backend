@@ -38,6 +38,7 @@ public class UserServiceImpl implements UserService {
     private final UserSpecifications userSpecifications;
     private final ProfileRepository profileRepository;
 
+
     @Override
     public PageResponse getPage(UserPageRequest userPageRequest) {
         Pageable pageable = userPageRequest.toPageable();
@@ -46,6 +47,7 @@ public class UserServiceImpl implements UserService {
         String email = userPageRequest.getEmail();
         Boolean enable = userPageRequest.getEnable();
         Integer type = userPageRequest.getType();
+
 
         Specification<User> spec = userSpecifications.searchUsers(username, email, enable, type);
 

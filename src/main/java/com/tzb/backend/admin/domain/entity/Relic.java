@@ -1,4 +1,4 @@
-package com.tzb.backend.web.domain.entity;
+package com.tzb.backend.admin.domain.entity;
 
 import com.tzb.backend.web.converter.StringListConverter;
 import jakarta.persistence.*;
@@ -13,10 +13,10 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
-@Table(name = "special_exhibits")
-public class SpecialExhibit {
+@Table(name = "relic")
+public class Relic {
     @Id
-    private int id; // 文物ID
+    private Long id; // 文物ID
     private String name; // 文物名称
     private String description; // 文物描述
     private String image; // 图片/多媒体资料
@@ -39,6 +39,6 @@ public class SpecialExhibit {
     private List<String> exhibitionHistory; // 展出历史
     @Convert(converter = StringListConverter.class)
     @Column(name = "related_artifacts")
-    private List<String> relatedArtifacts; // 关联文物
+    private List<String> relatedArtifacts; // 相关文创
 
 }
