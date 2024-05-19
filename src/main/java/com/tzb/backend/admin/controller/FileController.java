@@ -4,6 +4,7 @@ import cn.dev33.satoken.annotation.SaIgnore;
 import com.tzb.backend.admin.service.FileService;
 import com.tzb.backend.common.annotation.ExcludeResultWrapper;
 import com.tzb.backend.common.annotation.ResultWrapper;
+import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package com.tzb.backend.admin.repository.spc;
 
 import com.tzb.backend.admin.domain.entity.News;
-import com.tzb.backend.admin.domain.request.NewsPageRequest;
+import com.tzb.backend.admin.domain.request.news.NewsPageRequest;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;

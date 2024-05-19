@@ -1,18 +1,13 @@
 package com.tzb.backend.artwork;
 
 import com.tzb.backend.admin.domain.dto.UserPageDto;
-import com.tzb.backend.admin.domain.entity.Artwork;
 import com.tzb.backend.admin.domain.entity.User;
-import com.tzb.backend.admin.domain.request.ArtworkPageRequest;
-import com.tzb.backend.admin.domain.request.UserPageRequest;
+import com.tzb.backend.admin.domain.request.fuser.UserPageRequest;
 import com.tzb.backend.admin.mapper.FUserMapper;
-import com.tzb.backend.admin.repository.ArtworkRepository;
 import com.tzb.backend.admin.repository.UserRepository;
 import com.tzb.backend.admin.repository.UserSpecifications;
-import com.tzb.backend.common.core.PageResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.domain.Page;
@@ -21,7 +16,6 @@ import org.springframework.data.jpa.domain.Specification;
 
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.mockito.Mockito.when;
 
 public class ArtworkRepositoryTest {
 

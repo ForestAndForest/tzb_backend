@@ -2,9 +2,9 @@ package com.tzb.backend.admin.mapper;
 
 import com.tzb.backend.admin.domain.dto.UserPageDto;
 import com.tzb.backend.admin.domain.entity.User;
-import com.tzb.backend.admin.domain.request.LoginRequest;
-import com.tzb.backend.admin.domain.request.RegisterRequest;
-import com.tzb.backend.admin.domain.request.UpdateUserStatusRequest;
+import com.tzb.backend.admin.domain.request.fuser.LoginRequest;
+import com.tzb.backend.admin.domain.request.fuser.RegisterRequest;
+import com.tzb.backend.admin.domain.request.fuser.UpdateUserStatusRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

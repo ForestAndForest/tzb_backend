@@ -2,8 +2,8 @@ package com.tzb.backend.admin.mapper;
 
 import com.tzb.backend.admin.domain.dto.NewsPageDto;
 import com.tzb.backend.admin.domain.entity.News;
-import com.tzb.backend.admin.domain.request.AddNewsRequest;
-import com.tzb.backend.admin.domain.request.UpdateNewsRequest;
+import com.tzb.backend.admin.domain.request.news.AddNewsRequest;
+import com.tzb.backend.admin.domain.request.news.UpdateNewsRequest;
 import org.mapstruct.Mapper;
 
 import static com.tzb.backend.common.mapstruct.MapstructConstant.DEFAULT_COMPONENT_MODEL;

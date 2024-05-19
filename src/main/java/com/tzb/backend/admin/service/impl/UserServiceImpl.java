@@ -5,7 +5,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.tzb.backend.admin.domain.dto.UserPageDto;
 import com.tzb.backend.admin.domain.entity.Profile;
 import com.tzb.backend.admin.domain.entity.User;
-import com.tzb.backend.admin.domain.request.*;
+import com.tzb.backend.admin.domain.request.fuser.*;
 import com.tzb.backend.admin.mapper.FProfileMapper;
 import com.tzb.backend.admin.mapper.FUserMapper;
 import com.tzb.backend.admin.repository.ProfileRepository;

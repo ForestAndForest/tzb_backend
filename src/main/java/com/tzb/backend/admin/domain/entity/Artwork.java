@@ -17,7 +17,8 @@ public class Artwork {
     private String name;
     private String description;
     private String image;
-    private Integer publisher;
+    @Column(name = "publisher")
+    private Integer publisherId;
     private Integer type;
     private Integer stock;
     private double price;
@@ -27,10 +28,10 @@ public class Artwork {
     @Column(name = "update_time")
     private LocalDateTime updateTime;
     @Column(name = "is_sold_out")
-    private Boolean isSoldOut;
-    private Integer state;
+    private Boolean isSoldOut=false;
+    private Integer state=3;
     @Column(name = "page_view")
-    private Integer pageView;
+    private Integer pageView=0;
 
     public Artwork(){
         this.creteTime = LocalDateTime.now();

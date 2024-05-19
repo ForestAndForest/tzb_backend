@@ -1,22 +1,16 @@
 package com.tzb.backend.admin.controller;
 
-import com.tzb.backend.admin.domain.entity.Artwork;
-import com.tzb.backend.admin.domain.request.AddArtworkRequest;
-import com.tzb.backend.admin.domain.request.ArtworkPageRequest;
-import com.tzb.backend.admin.domain.request.UserPageRequest;
+import com.tzb.backend.admin.domain.request.artwork.AddArtworkRequest;
+import com.tzb.backend.admin.domain.request.artwork.ArtworkPageRequest;
+import com.tzb.backend.admin.domain.request.artwork.UpdateArtworkRequest;
 import com.tzb.backend.admin.mapper.ArtworkMapper;
 import com.tzb.backend.admin.service.ArtworkService;
 import com.tzb.backend.common.annotation.ResultWrapper;
 import com.tzb.backend.common.auth.RoleType;
 import com.tzb.backend.common.auth.Roles;
-import com.tzb.backend.pms.domain.request.CreateRoleRequest;
-import com.tzb.backend.pms.domain.request.RolePageRequest;
-import com.tzb.backend.pms.mapper.RoleMapper;
-import com.tzb.backend.pms.service.RoleService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,13 +22,14 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "手工艺术品管理")
 public class ArtworkController {
     private final ArtworkService artworkService;
-    private final ArtworkMapper artworkMapper;
 
     /**
      * 添加手工艺术品
      *
      * @return R
      */
+
+    @Operation(summary = "添加")
     @PostMapping
     @Roles(RoleType.SUPER_ADMIN)
     public Object addArtwork(@RequestBody @Validated AddArtworkRequest request) {
@@ -51,6 +46,18 @@ public class ArtworkController {
     @GetMapping("/page")
     public Object findPagination(ArtworkPageRequest request) {
         return artworkService.queryPage(request);
+    }
+    @PutMapping
+    @Roles(RoleType.SUPER_ADMIN)
+    public Object update(@RequestBody @Validated UpdateArtworkRequest request) {
+        artworkService.updateArtwork(request);
+        return null;
+    }
+    @DeleteMapping("{id}")
+    @Roles(RoleType.SUPER_ADMIN)
+    public Object delete(@PathVariable Long id) {
+        artworkService.delete(id);
+        return null;
     }
 
 }
