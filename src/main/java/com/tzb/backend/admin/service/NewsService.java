@@ -1,6 +1,7 @@
 package com.tzb.backend.admin.service;
 
 import com.tzb.backend.admin.domain.dto.NewsPageDto;
+import com.tzb.backend.admin.domain.entity.News;
 import com.tzb.backend.admin.domain.request.news.AddNewsRequest;
 import com.tzb.backend.admin.domain.request.news.DeleteNewsRequest;
 import com.tzb.backend.admin.domain.request.news.NewsPageRequest;
@@ -23,4 +24,6 @@ public interface NewsService {
     void delete(DeleteNewsRequest request);
 
     void add(AddNewsRequest request);
+
+    News getById(Integer id);
 }

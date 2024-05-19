@@ -1,6 +1,8 @@
 package com.tzb.backend.admin.repository;
 
 import com.tzb.backend.admin.domain.entity.News;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
@@ -11,4 +13,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  */
 public interface NewsRepository extends JpaRepository<News, Integer>, JpaSpecificationExecutor<News> {
     void deleteById(Integer id);
+
+    Page<News> findAllByStatus(Integer status, Pageable pageable);
 }

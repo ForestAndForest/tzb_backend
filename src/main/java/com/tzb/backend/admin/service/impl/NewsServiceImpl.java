@@ -50,7 +50,7 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public List<NewsPageDto> getHot() {
         Pageable pageable = PageRequest.of(0, 6, Sort.by(Sort.Direction.DESC, "createdAt"));
-        return newsRepository.findAll(pageable).getContent().stream()
+        return newsRepository.findAllByStatus(1, pageable).getContent().stream()
                 .map(newsMapper::toPageDto)
                 .toList();
     }
@@ -73,5 +73,14 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public void add(AddNewsRequest request) {
         newsRepository.save(newsMapper.toNews(request));
+    }
+
+    @Override
+    public News getById(Integer id) {
+        News news = newsRepository.findById(id).orElseThrow(() -> new CustomException("新闻不存在", 404));
+        if (news.getStatus() != 1) {
+            throw new CustomException("你没有权限查看", 401);
+        }
+        return news;
     }
 }

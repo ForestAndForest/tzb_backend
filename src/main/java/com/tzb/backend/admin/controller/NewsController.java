@@ -32,6 +32,12 @@ public class NewsController {
     }
 
     @SaIgnore
+    @GetMapping("/{id}")
+    public Object getById(@PathVariable int id) {
+        return newsService.getById(id);
+    }
+
+    @SaIgnore
     @GetMapping("/hot")
     public Object getHot() {
         return newsService.getHot();
