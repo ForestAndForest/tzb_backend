@@ -2,10 +2,10 @@ package com.tzb.backend.admin.service.impl;
 
 import com.tzb.backend.admin.domain.dto.NewsPageDto;
 import com.tzb.backend.admin.domain.entity.News;
-import com.tzb.backend.admin.domain.request.AddNewsRequest;
-import com.tzb.backend.admin.domain.request.DeleteNewsRequest;
-import com.tzb.backend.admin.domain.request.NewsPageRequest;
-import com.tzb.backend.admin.domain.request.UpdateNewsRequest;
+import com.tzb.backend.admin.domain.request.news.AddNewsRequest;
+import com.tzb.backend.admin.domain.request.news.DeleteNewsRequest;
+import com.tzb.backend.admin.domain.request.news.NewsPageRequest;
+import com.tzb.backend.admin.domain.request.news.UpdateNewsRequest;
 import com.tzb.backend.admin.mapper.NewsMapper;
 import com.tzb.backend.admin.repository.NewsRepository;
 import com.tzb.backend.admin.repository.spc.NewsSpecifications;

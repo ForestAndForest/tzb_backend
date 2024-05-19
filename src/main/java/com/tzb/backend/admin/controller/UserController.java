@@ -1,7 +1,7 @@
 package com.tzb.backend.admin.controller;
 
 import cn.dev33.satoken.annotation.SaIgnore;
-import com.tzb.backend.admin.domain.request.*;
+import com.tzb.backend.admin.domain.request.fuser.*;
 import com.tzb.backend.admin.service.UserService;
 import com.tzb.backend.common.annotation.ResultWrapper;
 import com.tzb.backend.common.auth.RoleType;

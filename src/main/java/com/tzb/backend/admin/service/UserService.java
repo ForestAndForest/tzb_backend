@@ -1,6 +1,6 @@
 package com.tzb.backend.admin.service;
 
-import com.tzb.backend.admin.domain.request.*;
+import com.tzb.backend.admin.domain.request.fuser.*;
 import com.tzb.backend.common.core.PageResponse;
 
 /**

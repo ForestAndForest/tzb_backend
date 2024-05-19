@@ -1,7 +1,7 @@
 package com.tzb.backend.admin.mapper;
 
 import com.tzb.backend.admin.domain.entity.Profile;
-import com.tzb.backend.admin.domain.request.UpdateUserProfileRequest;
+import com.tzb.backend.admin.domain.request.fuser.UpdateUserProfileRequest;
 import org.mapstruct.Mapper;
 
 import static com.tzb.backend.common.mapstruct.MapstructConstant.DEFAULT_COMPONENT_MODEL;
